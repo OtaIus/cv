@@ -1,0 +1,44 @@
+/*
+Aplica estos estilos CSS:
+El elemento main tiene un color de fondo amarillo claro 
+(lightyellow)
+
+Los heading 1 tengan color gris (gray)
+
+Los heading 2 tengan color gris claro (lightgray)
+
+Los elementos de las listas tengan un tamaño de letra de 16px
+
+El primer y último elemento de las listas sea negrita
+
+BONUS: En el último punto, usa pseudo clases
+*/
+
+main {
+    background-color: lightyellow;
+    padding: 20px;
+}
+
+h1 {
+    color: gray;
+}
+
+h2 {
+    color: lightgray;
+}
+
+li {
+    font-size: 26px;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+ul li:first-child{
+    font-weight: bold;
+}
+
+ul li:last-child{
+    font-weight: bold;
+}

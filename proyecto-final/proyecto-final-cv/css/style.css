@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+
+
+/* Contenedor GRID */
+.contenedor {
+    display: grid;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(41, 41, 41);
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    border-radius: 20px;
+}
+
+
+/* Menú */
+.menu {
+    width: 100%;
+    order: 2;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+}
+.menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0%;
+    margin-top: 1px;
+    list-style-type: none;
+}
+.menu li {
+    display: inline;
+    margin: 15px 5px;
+}
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem .3rem;
+    border-radius: 5px 10px 5px 0;
+    border-top: 2px solid rgba(130, 98, 204, 0);
+    border-right: 2px solid rgba(130, 98, 204, 0);
+}
+.menu a:hover {
+    background-color: rgba(93, 69, 150, 0.356);
+    border-top: 2px solid rgb(130, 98, 204);
+    border-right: 2px solid rgb(130, 98, 204);
+}
+.menu #sobre-mi a {
+    color: rgb(130, 98, 204);
+}
+.menu i {
+    color: rgb(130, 98, 204);
+}
+.menu hr {
+    width: 90%;
+}
+
+
+/* Perfil */
+.perfil {
+    order: 1;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 15px;
+}
+.perfil img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 5px;
+}
+.perfil header {
+    display: block;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.perfil header #nombre {
+    margin-top: 1.5rem;
+    margin-bottom: .3rem;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.perfil header #profesion {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: rgb(130, 98, 204);
+}
+
+
+/* Información */
+.info {
+    order: 3;
+    padding: 1rem 1rem;
+}
+.info h3 {
+    color: rgb(130, 98, 204);
+    font-size: 24px;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+article#info-sobre-mi {
+    display: block;
+}
+article#info-contacto {
+    display: none;
+}
+#info-contacto ul {
+    list-style-type: none;
+}
+#info-contacto li {
+    padding: .5rem 0 .5rem 0;
+    margin-left: 3rem;
+}
+
+article#info-experiencia {
+    display: none;
+}
+.experiencia-en {
+    background-color: rgba(86, 59, 148, 0.11);;
+    border-top: 3px solid rgba(130, 98, 204, 0.5);
+    border-left: 1px solid rgb(130, 98, 204, .5);
+    border-right: 1px solid rgb(130, 98, 204, .5);
+    border-radius: 15px 15px 0 0;
+
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+article#info-habilidades {
+    display: none;
+}
+#info-habilidades li {
+    padding: .5rem 0 .5rem 0;
+    margin-left: 3rem;
+}
+
+
+
+
+
+
+
+/* Media Queries */
+@media (min-width: 701px) and (max-width: 900px) {
+
+    /* Perfil */
+    .perfil header #nombre {
+        margin-bottom: 1rem;
+        font-size: 42px;
+    }
+    .perfil header #profesion {
+        font-size: 24px;
+    }
+
+    /* Menu */
+    .menu ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        list-style-type: none;
+    }
+}
+
+@media (min-width: 901px) {
+    body {
+        margin: auto;
+    }
+
+    /* Contenedor GRID */
+    .contenedor {
+        grid-template-columns: 1fr 2fr 2fr;
+        max-width: 1000px;
+        top: 70%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(15%);
+    }
+
+    .menu {
+        order: 1;
+        margin: auto;
+    }
+    .menu ul {
+        grid-template-columns: 1fr;
+    }
+    .menu hr {
+        display: none;
+    }
+
+    .perfil {
+        order: 2;
+    }
+    .perfil header #nombre {
+        margin-bottom: 1rem;
+        font-size: 28px;
+    }
+    .perfil header #profesion {
+        font-size: 18px;
+    }
+
+    .info {
+        order: 3;
+        height: 95%;
+        padding-bottom: 0;
+        justify-items: stretch;
+        overflow: scroll;
+    }
+}

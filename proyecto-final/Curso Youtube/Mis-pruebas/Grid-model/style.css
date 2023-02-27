@@ -1,0 +1,56 @@
+* {
+    border: 1px solid gray;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.grid-layout {
+    height: 700px;
+    display: grid;
+    grid-template-areas: 'cabecera cabecera'
+                        'menu menu'
+                        'contenido lateral'
+                        'footer footer';
+    grid-template-rows: 20% 10% auto 10%;
+    grid-template-columns: 70% auto;
+    background-color: lightgreen;
+}
+
+h1 {
+    text-align: center;
+}
+
+.caja {
+    border: 3px solid black;
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CABECERA */
+.c1 {
+    grid-area: cabecera;
+    background-color: lightblue;
+}
+
+/* MENU */
+.c2 {
+    grid-area: menu;
+}
+
+/* CONTENIDO */
+.c3 {
+    grid-area: contenido;
+}
+
+/* BARRA LATERAL */
+.c4 {
+    grid-area: lateral;
+}
+
+/* PIE DE PAGINA */
+.c5 {
+    grid-area: footer;
+}
