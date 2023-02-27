@@ -33,7 +33,7 @@ btn_habilidades.addEventListener("click", function() {
  */
 const fotoPerfil = document.querySelector('.perfil img')
 const info = document.querySelector('.info')
-info.style.height = ""+ fotoPerfil.offsetHeight + "px"
+info.style.height = fotoPerfil.offsetHeight === 0 ? "95%": (""+ fotoPerfil.offsetHeight + "px")
 window.onresize = function() {
     info.style.height = ""+ fotoPerfil.offsetHeight + "px"
 }
