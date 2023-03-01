@@ -62,5 +62,4 @@ function ocultarHijosInfo() {
 function mostrarInfo(id) {
     ocultarHijosInfo()
     document.getElementById(id).style.display = "block"
-    //document.getElementById(id).href = 'info-sobre-mi'
 }
